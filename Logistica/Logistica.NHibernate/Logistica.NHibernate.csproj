@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>0b3708f3-c042-4f22-841a-075b69f9224d</ProjectGuid>
+    <ProjectGuid>{0A9FD872-EDD1-488A-9644-51161D30D983}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Logistica.NHibernate</RootNamespace>
-    <AssemblyName>Logistica.NHibernate</AssemblyName>
+    <RootNamespace>SIGAPPBOM.Logistica.NHibernate</RootNamespace>
+    <AssemblyName>SIGAPPBOM.Logistica.NHibernate</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -38,10 +47,38 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="uNhAddIns">
+      <HintPath>..\packages\Inflector\uNhAddIns.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AutomappingConfiguration.cs" />
+    <Compile Include="Mapeo\ClassConvention.cs" />
+    <Compile Include="Mapeo\HasManyConvention.cs" />
+    <Compile Include="Mapeo\IdConvention.cs" />
+    <Compile Include="Mapeo\PropertyConvention.cs" />
+    <Compile Include="Mapeo\ReferenceConvention.cs" />
+    <Compile Include="NHibernateConfigurator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\IRepositorio.cs" />
+    <Compile Include="Repositorios\Repositorio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logistica.Dominio\Logistica.Dominio.csproj">
+      <Project>{DCE7760B-AE62-430A-8930-7863FE5B5F0A}</Project>
+      <Name>Logistica.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistica.Infraestructura\Logistica.Infraestructura.csproj">
+      <Project>{ADB9A3CD-570B-4E67-B516-4ABA7853294E}</Project>
+      <Name>Logistica.Infraestructura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataBase\sigappbom 07-07-V1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SIGAPPBOM.Logistica.Servicio.ViewModels.PedidoViewModel>
+<div class="span3">
+    <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header" style="padding-bottom: 20px">Menú - Pedidos</li>
+            <li class="active"><a href="#">Listado</a></li>
+            <li><a href="#">Nuevo Pedido</a></li>
+            <li style="padding-bottom: 400px"></li>
+        </ul>
+    </div>
+</div>
+<div class="span9">
+    <div class="well well-large" style="background-color: transparent">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@ViewBag.Titulo
+                </h2>
+            </div>
+            <div class="block_content">
+                <span>&nbsp;</span>
+                <div>
+                    <table class="table table-bordered table-condensed table-cabecera">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Número
+                                </th>
+                                <th>
+                                    Descripción
+                                </th>
+                                <th>
+                                    Solicitante
+                                </th>
+                                <th>
+                                    F. Registro
+                                </th>
+                                <th>
+                                    F. Atención
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th style="min-width: 50px; max-width: 60px">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                ViewBag.PedidoId = item.Id;                                
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Solicitante)
+                                    </td>
+                                    <td style="text-align: center">
+                                        @item.FechaCreacion.ToShortDateString()
+                                    </td>
+                                    <td style="text-align: center">
+                                        @if (item.FechaAtencion.ToString().Length > 0)
+                                        {
+                                            @item.FechaAtencion.ToString().Substring(0, 10)
+                                        }    
+                                    </td>
+                                    <td style="text-align: center">
+                                        @Html.Partial("_EstadoPedido", item.Estado)
+                                    </td>
+                                    <td style="min-width: 50px; max-width: 60px">
+                                        @Html.Partial("_AccionPedido", item.Estado)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert" style="background-color: transparent">
+                    <span class="label label-warning label-estado-leyenda">&nbsp;&nbsp;&nbsp;&nbsp;</span> PENDIENTE &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="label label-estado-leyenda">&nbsp;&nbsp;&nbsp;&nbsp;</span> ATENDIDO
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

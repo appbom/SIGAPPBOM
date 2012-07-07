@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -61,6 +73,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstraper\AutoMapperConfiguration.cs" />
+    <Compile Include="Bootstraper\ControllersConfigurator.cs" />
+    <Compile Include="Bootstraper\DependencyConfigurator.cs" />
+    <Compile Include="Bootstraper\StructureMapControllerFactory.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
+    <Compile Include="Dependencies\IoC.cs" />
+    <Compile Include="Dependencies\SmDependencyResolver.cs" />
+    <Compile Include="Filtros\TransactionAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -71,6 +91,7 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\appbom.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -152,11 +173,43 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ERPMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_MyLogOnPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logistica.Dominio\Logistica.Dominio.csproj">
+      <Project>{DCE7760B-AE62-430A-8930-7863FE5B5F0A}</Project>
+      <Name>Logistica.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistica.Infraestructura\Logistica.Infraestructura.csproj">
+      <Project>{ADB9A3CD-570B-4E67-B516-4ABA7853294E}</Project>
+      <Name>Logistica.Infraestructura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistica.NHibernate\Logistica.NHibernate.csproj">
+      <Project>{0A9FD872-EDD1-488A-9644-51161D30D983}</Project>
+      <Name>Logistica.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistica.Servicio\Logistica.Servicio.csproj">
+      <Project>{9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575}</Project>
+      <Name>Logistica.Servicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pedidos\PedidosLogistica.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pedidos\_EstadoPedido.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pedidos\_AccionPedido.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
