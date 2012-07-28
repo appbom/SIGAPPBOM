@@ -30,7 +30,7 @@ namespace SIGAPPBOM.Logistica.Web.Dependencies
                                              x.Scan(y =>
                                                         {
                                                             y.AssemblyContainingType<Pedido>();
-                                                            y.AssemblyContainingType<IPedidoBienesService>();
+                                                            y.AssemblyContainingType<IPedidoInsumosService>();
                                                             y.AddAllTypesOf<IController>();
                                                             y.TheCallingAssembly();
                                                             y.WithDefaultConventions();

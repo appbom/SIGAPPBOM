@@ -41,6 +41,25 @@ a:hover
     /* width: 1170px;*/
 }
 
+.container-fluid 
+{
+    margin-left: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+  zoom: 1;
+}
+
+.container-fluid:before,
+.container-fluid:after {
+  display: table;
+  content: "";
+}
+
+.container-fluid:after {
+  clear: both;
+}
+
+
 .block
 {
     display: block;
@@ -253,16 +272,6 @@ a:hover
     padding-bottom: 18px;
     padding-left: 0px;
 }
-/*
-.
-{
-    padding-top: 17px;
-    padding-right: 20px;
-    padding-bottom: 18px;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    border-top: 1px solid #DDD;
-}*/
 
 
 .form-actions::before, .form-actions::after

@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<SIGAPPBOM.Logistica.Servicio.ViewModels.PedidoViewModel>
-<div class="span3">
-    <div class="well sidebar-nav">
+<div class="span2">
+    <div class="well">
         <ul class="nav nav-list">
             <li class="nav-header" style="padding-bottom: 20px">Menú - Pedidos</li>
-            <li class="active"><a href="#">Listado</a></li>
-            <li><a href="#">Nuevo Pedido</a></li>
+            <li class="active"><a href="#">Insumos</a></li>
+            <li><a href="#">Bienes</a></li>
+            <li><a href="#">Servicios</a></li>
             <li style="padding-bottom: 400px"></li>
         </ul>
     </div>
@@ -19,6 +20,8 @@
                 </div>
                 <h2>@ViewBag.Titulo
                 </h2>
+                <a class="pull-right" href="@Url.Action("Nuevo", "PedidosInsumos")">
+                            Nuevo</a>
             </div>
             <div class="block_content">
                 <span>&nbsp;</span>

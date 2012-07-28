@@ -46,8 +46,6 @@ namespace SIGAPPBOM.Logistica.NHibernate.Integracion.Test.Articulos
             Assert.AreEqual(100, articuloGuardado.Stock);
 
             articuloRepositorio.Eliminar(articuloGuardado);
-
-
         }
 
 

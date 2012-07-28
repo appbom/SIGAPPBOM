@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using AutoMapper;
 using NUnit.Framework;
 using SIGAPPBOM.Logistica.Dominio.Articulos;
 using SIGAPPBOM.Logistica.Dominio.Pedidos;
@@ -16,6 +17,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test
         protected IRepositorio<Articulo> articuloRepositorio;
         protected IRepositorio<Pedido> pedidoRepositorio;
         protected IList<string> Errores;
+        protected IMappingEngine MappingEngine;
 
         [TestFixtureSetUp]
         public void SetupFixture()
@@ -25,21 +27,10 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test
             AutoMapperConfiguration.Start();
             DependencyConfigurator.Start();
             UnitOfWork = ObjectFactory.GetInstance<IUnitOfWork>();
+            MappingEngine = ObjectFactory.GetInstance<IMappingEngine>();
             articuloRepositorio = new Repositorio<Articulo>(UnitOfWork);
             pedidoRepositorio = new Repositorio<Pedido>(UnitOfWork);
-        }
 
-        [SetUp]
-        public void Init()
-        {
-            UnitOfWork.Begin();
-        }
-
-        [TearDown]
-        public void Dispose()
-        {
-            if (Errores.Count == 0)
-                UnitOfWork.End();
         }
     }
 }

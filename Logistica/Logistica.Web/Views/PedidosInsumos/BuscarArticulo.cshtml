@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SIGAPPBOM.Logistica.Servicio.ViewModels.ArticuloViewModel>
+
+@{
+    Layout = null;
+}
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.CodigoCatalogo)</td>
+        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+        <td>
+             <a href="javascript:SeleccionarArticulo(@Html.DisplayFor(modelItem => item.Id),'@Html.DisplayFor(modelItem => item.CodigoCatalogo)','@Html.DisplayFor(modelItem => item.Nombre)');" class="btn btn-small"><i class="icon-ok"></i></a>
+        </td>
+       
+    </tr>
+}

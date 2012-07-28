@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using NUnit.Framework;
 using SIGAPPBOM.Logistica.Dominio.Articulos;
 using SIGAPPBOM.Logistica.Dominio.Pedidos;
@@ -75,9 +72,7 @@ namespace SIGAPPBOM.Logistica.NHibernate.Integracion.Test.Pedidos
 
             pedidoRepositorio.Eliminar(pedidoGuardado);
             articuloRepositorio.Eliminar(articulo);
-
         }
-
 
         [TearDown]
         public void TearDown()
