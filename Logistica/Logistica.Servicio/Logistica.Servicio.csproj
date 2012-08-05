@@ -55,15 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen\IAlmacenService.cs" />
     <Compile Include="Articulos\ArticuloService.cs" />
     <Compile Include="Articulos\IArticuloService.cs" />
     <Compile Include="Comun\Estado.cs" />
+    <Compile Include="MappingResolvers\CantidadArticulosPedidosResolver.cs" />
     <Compile Include="MappingResolvers\NumeroItemsPedidoResolver.cs" />
     <Compile Include="Pedidos\IPedidoInsumosService.cs" />
     <Compile Include="Pedidos\PedidoInsumosService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicioNHibernate.cs" />
     <Compile Include="Validaciones\RequiredItemsAttribute.cs" />
+    <Compile Include="ViewModels\SalidaViewModel.cs" />
     <Compile Include="ViewModels\ArticuloViewModel.cs" />
     <Compile Include="ViewModels\PedidoViewModel.cs" />
   </ItemGroup>

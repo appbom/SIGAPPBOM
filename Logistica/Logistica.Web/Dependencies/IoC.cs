@@ -2,6 +2,7 @@ using System.Web.Mvc;
 using AutoMapper;
 using NHibernate;
 using SIGAPPBOM.Logistica.Dominio.Pedidos;
+using SIGAPPBOM.Logistica.Infraestructura.Authentication;
 using SIGAPPBOM.Logistica.Infraestructura.UnitOfWork;
 using SIGAPPBOM.Logistica.NHibernate.Repositorios;
 using SIGAPPBOM.Logistica.Servicio;
@@ -26,6 +27,7 @@ namespace SIGAPPBOM.Logistica.Web.Dependencies
                                              
                                              x.For(typeof(IRepositorio<>))
                                                 .Use(typeof(Repositorio<>));
+                                             x.For<IAuthenticationService>().Use<AuthenticationService>();
                                              x.For<IMappingEngine>().Use(Mapper.Engine);
                                              x.Scan(y =>
                                                         {

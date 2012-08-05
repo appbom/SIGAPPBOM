@@ -55,13 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\PedidosControllerTest.cs" />
+    <Compile Include="Controller\AlmacenControllerTest.cs" />
+    <Compile Include="Controller\PedidosInsumosControllerTest.cs" />
     <Compile Include="Mapeo\ConfigurationTest.cs" />
     <Compile Include="Mapeo\Destino.cs" />
     <Compile Include="Mapeo\Origen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Logistica.Infraestructura\Logistica.Infraestructura.csproj">
+      <Project>{ADB9A3CD-570B-4E67-B516-4ABA7853294E}</Project>
+      <Name>Logistica.Infraestructura</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logistica.Servicio\Logistica.Servicio.csproj">
       <Project>{9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575}</Project>
       <Name>Logistica.Servicio</Name>

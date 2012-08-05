@@ -4,6 +4,7 @@ using System.Linq;
 using SIGAPPBOM.Logistica.Dominio.Articulos;
 using SIGAPPBOM.Logistica.Dominio.Pedidos;
 using SIGAPPBOM.Logistica.NHibernate.Repositorios;
+using SIGAPPBOM.Logistica.Servicio.Comun;
 using SIGAPPBOM.Logistica.Servicio.ViewModels;
 using AutoMapper;
 
@@ -162,6 +163,55 @@ namespace SIGAPPBOM.Logistica.Servicio.Pedidos
                 throw;
             }
             return Errores.Count == 0;
+        }
+
+        public bool Eliminar(int pedidoId)
+        {
+            try
+            {
+                var pedido = pedidosRepositorio.BuscarPor(pedidoId);
+                if (pedido == null)
+                    Errores.Add("No se eliminó - Pedido no existe");
+                else if (pedido.Estado != Estado.PENDIENTE.GetHashCode())
+                {
+                    Errores.Add("No se eliminó - Estado del pedido es incorrecto");
+                }
+                else
+                {
+                    pedidosRepositorio.Eliminar(pedido);
+                }
+            }
+            catch (Exception ex)
+            {
+                Errores.Add(ex.Message);
+            }
+
+            return Errores.Count == 0;
+        }
+
+
+        public PedidoViewModel TraerPor (int pedidoId)
+        {
+            var pedido = pedidosRepositorio.BuscarPor(pedidoId);
+
+            if (pedido != null)
+            {
+                var pedidoViewModel = mappingEngine.Map<Pedido, PedidoViewModel>(pedido);
+
+                //if (pedido.Estado >= Estado.ATENDIDO.GetHashCode())
+                //{
+                //    var notaSalida = notaSalidaRepositorio.TraerTodo().SingleOrDefault(x => x.Pedido.Id == pedidoId);
+                //    if (notaSalida != null)
+                //    {
+                //        pedidoViewModel.NotaSalidaId = notaSalida.Id > 0 ? notaSalida.Id.ToString() : "";
+                //        pedidoViewModel.NotaSalidaUsuario = notaSalida.Usuario;
+                //    }
+                //}
+
+                return pedidoViewModel;
+            }
+
+            return null;
         }
     }
 }

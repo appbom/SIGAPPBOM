@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen\NotaSalidaRepositorioTest.cs" />
     <Compile Include="Articulos\ArticuloRepositorioTest.cs" />
     <Compile Include="Pedidos\PedidoRepositorioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

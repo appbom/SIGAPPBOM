@@ -115,6 +115,65 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test.Pedidos
 
         #endregion
 
+        #region Traer Por
+
+        [Test]
+        public void TraerPor_CUANDO_PedidoEsValido_ENTONCES_DebeDevolverPedidoCorrectamente()
+        {
+            //Articulos
+            var articulo1 = new Articulo
+            {
+                Id = 0,
+                CodigoCatalogo = "COD001",
+                Nombre = "Caja 13 Kilos",
+                Stock = 100
+            };
+            articuloRepositorio.Guardar(articulo1);
+
+            var articulo2 = new Articulo
+            {
+                Id = 0,
+                CodigoCatalogo = "COD001",
+                Nombre = "Caja 13 Kilos",
+                Stock = 100
+            };
+            articuloRepositorio.Guardar(articulo2);
+
+            //Pedidos
+            var pedido1 = new Pedido
+            {
+                Descripcion = "Test Integracion 1",
+                Estado = Estado.PENDIENTE.GetHashCode(),
+                FechaCreacion = DateTime.Parse("14/06/2012"),
+                Solicitante = "Test"
+            };
+
+            var detalle1 = new DetallePedido
+            {
+                Articulo = articulo1,
+                CantidadSolicitada = 10,
+                CantidadAtendida = 0
+            };
+            pedido1.RegistrarDetalle(detalle1);
+
+            pedidoRepositorio.Guardar(pedido1);
+
+            var pedidoViewModel = servicioPedido.TraerPor(pedido1.Id);
+
+            Assert.NotNull(pedidoViewModel);
+            Assert.AreEqual("Test Integracion 1", pedidoViewModel.Descripcion);
+
+            foreach (string msg in servicioPedido.Errores)
+                System.Diagnostics.Debug.WriteLine(msg);
+            Errores = servicioPedido.Errores;
+
+            pedidoRepositorio.Eliminar(pedido1);
+            articuloRepositorio.Eliminar(articulo1);
+            articuloRepositorio.Eliminar(articulo2);
+        }
+
+        #endregion
+
         #region Grabar
 
         [Test]
@@ -175,7 +234,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test.Pedidos
 
         #endregion
 
-        #region Editar Pedido
+        #region Actualizar
 
         [Test]
         public void Editar_CuandoPedidoTiene2DetallesElimino1YEdito1_DebeGrabarEnBaseDeDatos()
@@ -246,7 +305,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test.Pedidos
 
             Assert.IsNotNull(pedidoResult);
             Assert.AreEqual("Test Edición Integracion", pedidoResult.Descripcion);
-            Assert.AreEqual(1,pedidoResult.Detalles.Count);
+            Assert.AreEqual(1, pedidoResult.Detalles.Count);
             Assert.AreEqual(articulo2.Id, pedidoResult.Detalles[0].Articulo.Id);
             Assert.AreEqual(articulo2.Nombre, pedidoResult.Detalles[0].Articulo.Nombre);
             Assert.AreEqual(40, pedidoResult.Detalles[0].CantidadSolicitada);
@@ -423,6 +482,62 @@ namespace SIGAPPBOM.Logistica.Servicio.Integracion.Test.Pedidos
             articuloRepositorio.Eliminar(articulo2);
             articuloRepositorio.Eliminar(articulo3);
             articuloRepositorio.Eliminar(articulo4);
+        }
+
+        #endregion
+
+        #region Eliminar
+
+        [Test]
+        public void Eliminar_CUANDO_PedidoEsValido_ENTONCES_DebeEliminarPedidoCorrectamente()
+        {
+            //Articulos
+            var articulo1 = new Articulo
+            {
+                Id = 0,
+                CodigoCatalogo = "COD001",
+                Nombre = "Caja 13 Kilos",
+                Stock = 100
+            };
+            articuloRepositorio.Guardar(articulo1);
+
+            var articulo2 = new Articulo
+            {
+                Id = 0,
+                CodigoCatalogo = "COD001",
+                Nombre = "Caja 13 Kilos",
+                Stock = 100
+            };
+            articuloRepositorio.Guardar(articulo2);
+
+            //Pedidos
+            var pedido1 = new Pedido
+            {
+                Descripcion = "Test Integracion 1",
+                Estado = Estado.PENDIENTE.GetHashCode(),
+                FechaCreacion = DateTime.Parse("14/06/2012"),
+                Solicitante = "Test"
+            };
+
+            var detalle1 = new DetallePedido
+            {
+                Articulo = articulo1,
+                CantidadSolicitada = 10,
+                CantidadAtendida = 0
+            };
+            pedido1.RegistrarDetalle(detalle1);
+            pedidoRepositorio.Guardar(pedido1);
+
+            Assert.IsTrue(servicioPedido.Eliminar(pedido1.Id));
+            Assert.Null(servicioPedido.TraerPor(pedido1.Id));
+
+            foreach (string msg in servicioPedido.Errores)
+                System.Diagnostics.Debug.WriteLine(msg);
+            Errores = servicioPedido.Errores;
+
+            pedidoRepositorio.Eliminar(pedido1);
+            articuloRepositorio.Eliminar(articulo1);
+            articuloRepositorio.Eliminar(articulo2);
         }
 
         #endregion

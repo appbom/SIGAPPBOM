@@ -17,7 +17,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
     {
         private Mock<IRepositorio<Pedido>> pedidosRepositorioFalso;
         private Mock<IRepositorio<Articulo>> articulosRepositorioFalso;
-        private PedidoInsumosService pedidoBienesService;
+        private PedidoInsumosService pedidoInsumosService;
         private PedidoViewModel pedidoViewModel;
         private Pedido pedidoModelo;
 
@@ -28,7 +28,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
         {
             pedidosRepositorioFalso = new Mock<IRepositorio<Pedido>>();
             articulosRepositorioFalso = new Mock<IRepositorio<Articulo>>();
-            pedidoBienesService = new PedidoInsumosService(pedidosRepositorioFalso.Object, articulosRepositorioFalso.Object, mappingEngine);
+            pedidoInsumosService = new PedidoInsumosService(pedidosRepositorioFalso.Object, articulosRepositorioFalso.Object, mappingEngine);
             pedidoViewModel = new PedidoViewModel { Id = 1, Descripcion = "Pedido 01", Solicitante = "Pedro Dominguez", Estado = Estado.PENDIENTE, FechaCreacion = DateTime.Parse("12/05/2012") };
             pedidoModelo = new Pedido { Id = 1, Descripcion = "Pedido 01", Solicitante = "Pedro Dominguez", Estado = Estado.PENDIENTE.GetHashCode(), FechaCreacion = DateTime.Parse("12/05/2012") };
         }
@@ -38,7 +38,7 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
         {
             pedidosRepositorioFalso = null;
             articulosRepositorioFalso = null;
-            pedidoBienesService = null;
+            pedidoInsumosService = null;
         }
 
         #endregion
@@ -52,10 +52,10 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             pedidosRepositorioFalso.Setup(x => x.TraerTodo()).Returns(pedidos);
 
-            var pedidosViewModel = pedidoBienesService.TraerLista();
+            var pedidosViewModel = pedidoInsumosService.TraerLista();
 
             Assert.AreEqual(0, pedidosViewModel.Count);
-            Assert.AreEqual("No hay pedidos de bienes registrados", pedidoBienesService.Errores[0]);
+            Assert.AreEqual("No hay pedidos de bienes registrados", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -69,11 +69,34 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             pedidosRepositorioFalso.Setup(x => x.TraerTodo()).Returns(pedidos);
 
-            var pedidosViewModel = pedidoBienesService.TraerLista();
+            var pedidosViewModel = pedidoInsumosService.TraerLista();
 
             Assert.AreEqual(2, pedidosViewModel.Count);
         }
 
+        #endregion
+
+        #region Traer Por
+
+        [Test]
+        public void TraerPor_CUANDO_PedidoNoExiste_ENTONCES_DevuelveNull()
+        {
+            pedidoViewModel = pedidoInsumosService.TraerPor(-1);
+            Assert.IsNull(pedidoViewModel);
+        }
+
+        [Test]
+        public void TraerPedido_Cuando_PedidoConItemDeDetalleLapicero_Entonces_DevolverPedidoViewModelCorrectamente()
+        {
+            pedidoViewModel.Estado = Estado.PENDIENTE;
+            pedidoViewModel.Detalles.Add(new DetallePedidoViewModel { Item = 1, ArticuloId = 1, ArticuloNombre = "Articulo", CantidadSolicitada = 10 });
+            var pedido = ToPedido(pedidoViewModel);
+            pedidosRepositorioFalso.Setup(x => x.BuscarPor(pedidoViewModel.Id)).Returns(pedido);
+
+            var pedidoSalida = pedidoInsumosService.TraerPor(pedidoViewModel.Id);
+            Assert.IsNotNull(pedidoSalida);
+        }
+        
         #endregion
 
         #region Grabar
@@ -85,8 +108,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             pedidoViewModel.Solicitante = "";
             pedidoViewModel.Detalles.Add(new DetallePedidoViewModel());
 
-            Assert.IsFalse(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual("Ingresar solicitante para pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual("Ingresar solicitante para pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -97,8 +120,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             pedidoViewModel.Descripcion = "";
             pedidoViewModel.Detalles.Add(new DetallePedidoViewModel());
 
-            Assert.IsFalse(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual("Ingresar descripción de pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual("Ingresar descripción de pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -106,8 +129,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
         {
             pedidoViewModel.Id = 0;
             pedidoViewModel.Solicitante = "Pedro Perez";
-            Assert.IsFalse(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual("Añadir artículos al detalle de pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual("Añadir artículos al detalle de pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -117,8 +140,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             pedidoViewModel.Solicitante = "Pedro Perez";
             pedidoViewModel.Detalles.Add(new DetallePedidoViewModel { Item = 1, ArticuloId = 101, ArticuloNombre = "Articulo", CantidadSolicitada = 0 });
 
-            Assert.IsFalse(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual("Item 1: Ingresar cantidad mayor a cero", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual("Item 1: Ingresar cantidad mayor a cero", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -130,8 +153,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             Articulo articulo = null;
             articulosRepositorioFalso.Setup(s => s.BuscarPor(articuloId)).Returns(articulo);
 
-            Assert.IsFalse(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual("Item 1: Articulo no existe", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual("Item 1: Articulo no existe", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -142,8 +165,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             Articulo articulo = new Articulo { Id = 1 };
             articulosRepositorioFalso.Setup(s => s.BuscarPor(articulo.Id)).Returns(articulo);
 
-            Assert.IsTrue(pedidoBienesService.Grabar(pedidoViewModel));
-            Assert.AreEqual(0, pedidoBienesService.Errores.Count);
+            Assert.IsTrue(pedidoInsumosService.Grabar(pedidoViewModel));
+            Assert.AreEqual(0, pedidoInsumosService.Errores.Count);
         }
 
         #endregion
@@ -158,8 +181,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             pedidoViewModel.Solicitante = string.Empty;
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Pedido no existe", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Pedido no existe", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -171,8 +194,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             pedidoViewModel.Solicitante = string.Empty;
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Ingresar solicitante para pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Ingresar solicitante para pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -184,8 +207,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             pedidoViewModel.Descripcion = "";
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Ingresar descripción de pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Ingresar descripción de pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -194,8 +217,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             var pedido = ToPedido(pedidoViewModel);
             pedidosRepositorioFalso.Setup(x => x.BuscarPor(pedidoViewModel.Id)).Returns(pedido);
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Añadir artículos al detalle de pedido", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Añadir artículos al detalle de pedido", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -208,8 +231,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
             pedidoViewModel.Detalles.Clear();
             pedidoViewModel.Detalles.Add(new DetallePedidoViewModel { Item = 1, ArticuloId = 101, ArticuloNombre = "Articulo", CantidadSolicitada = 0 });
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Item 1: Ingresar cantidad mayor a cero", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Item 1: Ingresar cantidad mayor a cero", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -224,8 +247,8 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             articulosRepositorioFalso.Setup(s => s.BuscarPor(101)).Returns((Articulo)null);
 
-            Assert.IsFalse(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual("Item 1: Articulo no existe", pedidoBienesService.Errores[0]);
+            Assert.IsFalse(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual("Item 1: Articulo no existe", pedidoInsumosService.Errores[0]);
         }
 
         [Test]
@@ -243,8 +266,45 @@ namespace SIGAPPBOM.Logistica.Servicio.Unit.Test.Pedidos
 
             articulosRepositorioFalso.Setup(s => s.BuscarPor(articulo.Id)).Returns(articulo);
 
-            Assert.IsTrue(pedidoBienesService.Actualizar(pedidoViewModel));
-            Assert.AreEqual(0, pedidoBienesService.Errores.Count);
+            Assert.IsTrue(pedidoInsumosService.Actualizar(pedidoViewModel));
+            Assert.AreEqual(0, pedidoInsumosService.Errores.Count);
+        }
+
+        #endregion
+
+        #region Eliminar
+
+        [Test]
+        public void Eliminar_EliminacionDePedidos_Cuando_SeQuiereEliminarUnPedidoInexistente_Entonces_RetornaFalsoYMensajeDeError_PedidoNoExiste()
+        {
+            pedidosRepositorioFalso.Setup(x => x.BuscarPor(pedidoViewModel.Id)).Returns((Pedido)null);
+
+            Assert.IsFalse(pedidoInsumosService.Eliminar(pedidoViewModel.Id));
+            Assert.AreEqual("No se eliminó - Pedido no existe", pedidoInsumosService.Errores[0]);
+        }
+
+        [Test]
+        public void Eliminar_EliminacionDePedidos_Cuando_SeQuiereEliminarUnPedidoConEstadoAtendido_Entonces_RetornaFalsoYMensajeDeError_EstadoDePedidoEsIncorrecto()
+        {
+            pedidoViewModel.Estado = Estado.ATENDIDO;
+            pedidoViewModel.Detalles.Add(new DetallePedidoViewModel { Item = 1, ArticuloId = 1, ArticuloNombre = "Articulo", CantidadSolicitada = 10 });
+            Pedido pedido = this.ToPedido(pedidoViewModel);
+            pedidosRepositorioFalso.Setup(x => x.BuscarPor(pedidoViewModel.Id)).Returns(pedido);
+
+            Assert.IsFalse(pedidoInsumosService.Eliminar(pedidoViewModel.Id));
+            Assert.AreEqual("No se eliminó - Estado del pedido es incorrecto", pedidoInsumosService.Errores[0]);
+        }
+
+        [Test]
+        public void Eliminar_EliminacionDePedidos_Cuando_SeQuiereEliminarUnPedidoYNoExistanErrores_Entonces_RetornarTrueYCantidadErroresCero()
+        {
+            pedidoViewModel.Estado = Estado.PENDIENTE;
+            pedidoViewModel.Detalles.Add(new DetallePedidoViewModel { Item = 1, ArticuloId = 1, ArticuloNombre = "Articulo", CantidadSolicitada = 10 });
+            Pedido pedido = this.ToPedido(pedidoViewModel);
+            pedidosRepositorioFalso.Setup(x => x.BuscarPor(pedidoViewModel.Id)).Returns(pedido);
+
+            Assert.IsTrue(pedidoInsumosService.Eliminar(pedidoViewModel.Id));
+            Assert.AreEqual(0, pedidoInsumosService.Errores.Count);
         }
 
         #endregion

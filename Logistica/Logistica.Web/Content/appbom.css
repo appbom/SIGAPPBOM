@@ -155,7 +155,7 @@ a:hover
     padding: 0;
     padding-left: 20px;
     padding-right: 20px;
-    height: 490;
+    height: auto;
     background-color: white;
     border-left-style: solid;
     border-left-color: #CCC;
@@ -314,12 +314,28 @@ a:hover
     border: 1px #F0F4F5 solid;
 }
 
+.alert-leyenda {
+    padding: 4px 4px 4px 8px; 
+    background-color: transparent; 
+    font-size: 8px; 
+    margin-top: 30px
+}
+
 .label-estado {
     padding-left: 25px;
 }
 
-.label-estado-leyenda {
-    padding-left: 15px;
+.alert-leyenda .label-estado
+{
+    padding-bottom: -7px;
+    padding-top: -7px;
+    padding-left: 12px;
+}
+
+.alert-leyenda .descripcion
+{
+    padding-left: 3px;
+    margin-right: 20px;
 }
 
 .label-aprobado,
@@ -330,4 +346,26 @@ a:hover
 .label-aprobado[href],
 .badge-aprobado[href] {
   background-color: #a6f3c1;
+}
+
+.linksInTitle
+{
+    text-align:right;
+    float:right;
+    font-size: 9px;
+    margin:0px;
+    padding:0px;
+     
+}
+.linksInTitle
+{
+	text-align:right;
+	float:right;
+	font-size: 9px;
+	padding:0px;
+	list-style-type: none;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
 }

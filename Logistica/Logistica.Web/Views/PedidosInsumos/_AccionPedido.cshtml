@@ -7,12 +7,12 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li><a href="@Url.Action("DetallePedidoInsumos", new { id = pedidoId })"><i class="icon-list-alt"></i>  Detalle</a></li> 
+        <li><a href="@Url.Action("Detalle", new { pedidoId = pedidoId })"><i class="icon-list-alt"></i>  Detalle</a></li> 
         @switch (Model)
         {
             case Estado.PENDIENTE:
-                <li><a href="@Url.Action("AtenderPedidoInsumos", new { id = pedidoId })"><i class="icon-share"></i>  Atender</a></li>
-                <li><a href="@Url.Action("EliminarPedidoInsumos", new { id = pedidoId })"><i class="icon-trash"></i>  Eliminar</a></li>
+                <li><a href="@Url.Action("Atender", new { id = pedidoId })"><i class="icon-share"></i>  Atender</a></li>
+                <li><a href="@Url.Action("Eliminar", new { pedidoId = pedidoId })"><i class="icon-trash"></i>  Eliminar</a></li>
                         break;
         }
     </ul>

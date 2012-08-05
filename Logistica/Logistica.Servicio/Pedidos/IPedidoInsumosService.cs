@@ -10,8 +10,10 @@ namespace SIGAPPBOM.Logistica.Servicio.Pedidos
     {
         List<string> Errores { get; set; }
         IList<PedidoViewModel> TraerLista();
+        PedidoViewModel TraerPor(int p);
         bool Grabar(PedidoViewModel pedidoViewModel);
         bool Actualizar(PedidoViewModel pedidoViewModel);
+        bool Eliminar(int pedidoId);
     }
 
 }

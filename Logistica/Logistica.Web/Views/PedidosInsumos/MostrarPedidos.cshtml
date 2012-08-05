@@ -20,8 +20,7 @@
                 </div>
                 <h2>@ViewBag.Titulo
                 </h2>
-                <a class="pull-right" href="@Url.Action("Nuevo", "PedidosInsumos")">
-                            Nuevo</a>
+                <a class="pull-right" href="@Url.Action("Nuevo", "PedidosInsumos")">Nuevo</a>
             </div>
             <div class="block_content">
                 <span>&nbsp;</span>
@@ -54,7 +53,9 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                ViewBag.PedidoId = item.Id;                                
+                                ViewBag.PedidoId = item.Id;
+                                var fechaAtencion = item.FechaAtencion == null ? " " : string.Format("{0:d}", item.FechaAtencion);
+                             
                                 <tr>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Id)
@@ -69,10 +70,7 @@
                                         @item.FechaCreacion.ToShortDateString()
                                     </td>
                                     <td style="text-align: center">
-                                        @if (item.FechaAtencion.ToString().Length > 0)
-                                        {
-                                            @item.FechaAtencion.ToString().Substring(0, 10)
-                                        }    
+                                        @fechaAtencion
                                     </td>
                                     <td style="text-align: center">
                                         @Html.Partial("_EstadoPedido", item.Estado)
@@ -85,10 +83,21 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="alert" style="background-color: transparent">
-                    <span class="label label-warning label-estado-leyenda">&nbsp;&nbsp;&nbsp;&nbsp;</span> PENDIENTE &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="label label-estado-leyenda">&nbsp;&nbsp;&nbsp;&nbsp;</span> ATENDIDO
-                </div>
+                @if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+                {
+                    <div id="msg-alert" class="alert" style="text-align: center;">
+                        <span id="msg-alert-message">
+                            @ViewBag.Mensaje
+                        </span>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-leyenda">
+                        <span class="label label-warning label-estado"></span><span class="descripcion">PENDIENTE</span>
+                        <span class="label label-estado"></span><span class="descripcion">ATENDIDO</span>
+                    </div>
+                }
             </div>
         </div>
     </div>
