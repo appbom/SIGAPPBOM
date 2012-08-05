@@ -1,0 +1,41 @@
+﻿@model SIGAPPBOM.Logistica.Web.Models.OperacionInvalidaViewModel
+<div id="content">
+    <div class="container">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@Model.Titulo
+                </h2>
+                <a class="pull-right" href="@Url.Action(Model.Accion, Model.Controlador)">Volver
+                </a>
+            </div>
+            <div class="block_content">
+                <!--ini cabecera-->
+                <div class="row span11">
+                    <p>
+                        &nbsp;</p>
+                    <div class="alert alert-error">
+                        <h4 class="alert-heading">
+                            Error!!</h4>
+                        <div class="bheadt">
+                        </div>
+                        @if (Model.Mensajes.Count > 0)
+                        {
+                            foreach (var mensaje in Model.Mensajes)
+                            {
+                            <p>@mensaje</p>
+                            <br />
+                            }
+                        }
+                    </div>
+                    <p>
+                        &nbsp;</p>
+                </div>
+                <!--fin cabecera-->
+            </div>
+        </div>
+    </div>
+</div>
