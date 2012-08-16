@@ -76,11 +76,10 @@
       <Name>Logistica.Infraestructura</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DataBase\Test\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataBase\App\sigappbom 07-07-V1.sql" />
+    <Content Include="DataBase\App\sigappbom V1 05-08-2012.sql" />
+    <Content Include="DataBase\Test\sigappbom_test V1 05-08-2012.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

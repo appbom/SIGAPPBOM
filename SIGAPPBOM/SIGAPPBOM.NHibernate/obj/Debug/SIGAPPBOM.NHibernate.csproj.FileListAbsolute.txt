@@ -1,0 +1,16 @@
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.NHibernate.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\FluentNHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\Iesi.Collections.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Dominio.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Infraestructura.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\uNhAddIns.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Dominio.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Infraestructura.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\FluentNHibernate.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\Iesi.Collections.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\NHibernate.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\ResolveAssemblyReference.cache
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.pdb

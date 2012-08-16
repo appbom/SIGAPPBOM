@@ -1,0 +1,11 @@
+﻿@using SIGAPPBOM.Servicio.Comun
+@model Estado
+@switch (Model)
+{
+    case Estado.PENDIENTE:                            
+    <span class="label label-warning label-estado"></span>
+        break;
+    case Estado.ATENDIDO:
+    <span class="label label-estado"></span>
+        break;
+}

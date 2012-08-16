@@ -1,0 +1,19 @@
+﻿@{int pedidoId = ViewBag.PedidoId;}
+@using SIGAPPBOM.Servicio.Comun
+@model Estado
+<div class="btn-group">
+    <a class="btn btn-mini" href="#"><i class="icon-cog"></i></a>
+    <button class="btn dropdown-toggle btn-mini" data-toggle="dropdown" title="Acción">
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("Detalle", new { pedidoId = pedidoId })"><i class="icon-list-alt"></i>  Detalle</a></li> 
+        @switch (Model)
+        {
+            case Estado.PENDIENTE:
+                <li><a href="@Url.Action("Atender", new { id = pedidoId })"><i class="icon-share"></i>  Atender</a></li>
+                <li><a href="@Url.Action("Eliminar", new { pedidoId = pedidoId })"><i class="icon-trash"></i>  Eliminar</a></li>
+                        break;
+        }
+    </ul>
+</div>

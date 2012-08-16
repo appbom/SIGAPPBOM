@@ -1,0 +1,104 @@
+﻿@model IEnumerable<SIGAPPBOM.Servicio.ViewModels.PedidoViewModel>
+<div class="span2">
+    <div class="well">
+        <ul class="nav nav-list">
+            <li class="nav-header" style="padding-bottom: 20px">Menú - Pedidos</li>
+            <li class="active"><a href="#">Insumos</a></li>
+            <li><a href="#">Bienes</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li style="padding-bottom: 400px"></li>
+        </ul>
+    </div>
+</div>
+<div class="span9">
+    <div class="well well-large" style="background-color: transparent">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@ViewBag.Titulo
+                </h2>
+                <a class="pull-right" href="@Url.Action("Nuevo", "PedidosInsumos")">Nuevo</a>
+            </div>
+            <div class="block_content">
+                <span>&nbsp;</span>
+                <div>
+                    <table class="table table-bordered table-condensed table-cabecera">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Número
+                                </th>
+                                <th>
+                                    Descripción
+                                </th>
+                                <th>
+                                    Solicitante
+                                </th>
+                                <th>
+                                    F. Registro
+                                </th>
+                                <th>
+                                    F. Atención
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th style="min-width: 50px; max-width: 60px">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                ViewBag.PedidoId = item.Id;
+                                var fechaAtencion = item.FechaAtencion == null ? " " : string.Format("{0:d}", item.FechaAtencion);
+                             
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Solicitante)
+                                    </td>
+                                    <td style="text-align: center">
+                                        @item.FechaCreacion.ToShortDateString()
+                                    </td>
+                                    <td style="text-align: center">
+                                        @fechaAtencion
+                                    </td>
+                                    <td style="text-align: center">
+                                        @Html.Partial("_EstadoPedido", item.Estado)
+                                    </td>
+                                    <td style="min-width: 50px; max-width: 60px">
+                                        @Html.Partial("_AccionPedido", item.Estado)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+                {
+                    <div id="msg-alert" class="alert" style="text-align: center;">
+                        <span id="msg-alert-message">
+                            @ViewBag.Mensaje
+                        </span>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-leyenda">
+                        <span class="label label-warning label-estado"></span><span class="descripcion">PENDIENTE</span>
+                        <span class="label label-estado"></span><span class="descripcion">ATENDIDO</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

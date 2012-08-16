@@ -1,0 +1,169 @@
+﻿@model SIGAPPBOM.Logistica.Servicio.ViewModels.PedidoViewModel
+@{ 
+    Html.EnableClientValidation(true);
+    
+}
+@using (Html.BeginForm("Nuevo", "PedidosInsumos"))
+{
+    <script src="@Url.Content("~/Scripts/jquery-customvalidation.js")" type="text/javascript"></script>  
+    @Html.ValidationSummary(true)
+
+    <div class="container">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@ViewBag.Titulo
+                </h2>
+            </div>
+            <div class="block_content">
+                <!--ini cabecera-->
+                <div class="row" style="margin-left: 20px">
+                    <div class="span10">
+                        <p>
+                            &nbsp;</p>
+                        @Html.HiddenFor(model => model.Estado)
+                        @Html.HiddenFor(model => model.NumeroItems)
+                        @Html.LabelFor(model => model.Solicitante)
+                        @Html.TextBoxFor(model => Model.Solicitante, new { @class = "span7" })
+                        @Html.LabelFor(model => model.Descripcion)
+                        @Html.TextBoxFor(model => Model.Descripcion, new { @class = "span12" })
+                    </div>
+                </div>
+                <!--fin cabecera-->
+                <div class="row" style="margin-left: 20px">
+                    <div class="span11">
+                        <ul class="breadcrumb">
+                            <li><a id="btnNuevoArticulo" href="#"><i class="icon-plus"></i>Nuevo Artículo</a> <span
+                                class="divider">|</span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 20px">
+                    <div class="span11">
+                        <!--Ini "Nuevo Articulo"-->
+                        <div id="frmNuevoArticulo" class="well form-inline">
+                            <a id="frmNuevoArticulo-close" class="close" href="#">×</a>
+                            <div class="input-append">
+                                <label>
+                                    Artículo:</label>
+                                <input class="span5" id="txtArticulo" type="text" disabled />
+                                <a class="btn" data-toggle="modal" href="#myModal">...</a>
+                                <input type="hidden" id="NewArticuloId" />
+                                <input type="hidden" id="NewArticuloCod" />
+                            </div>
+                            <label>
+                                Cantidad</label>
+                            <input id="txtCantidad" type="text" class="input-small">
+                            <input id="btnAgregarArticulo" class="btn" type="button" value="Agregar">
+                        </div>
+                        <!--End "Nuevo Articulo"
+
+                            <!--Ini Alert-->
+                        <div id="msg-alert" class="alert">
+                            <button type="button" id="msg-alert-close" class="close">
+                                ×</button>
+                            <!--mensajes del modelo-->
+                            <span id="msg-alert-message">
+                                <p>@Html.ValidationMessageFor(m => m.Solicitante)</p>
+                                <p>@Html.ValidationMessageFor(m => m.Descripcion)</p>
+                                <p>@Html.ValidationMessageFor(m => m.NumeroItems)</p>
+                                <p>
+                                    <span>@ViewBag.Mensaje</span></p>
+                            </span><span id="msg-alert-message-custom">
+                                <!--mensajes personalizados -->
+                            </span>
+                        </div>
+                        <!--End Alert-->
+                        <!--Ini Detalles-->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        Item
+                                    </td>
+                                    <td>
+                                        Código
+                                    </td>
+                                    <td>
+                                        Artículo
+                                    </td>
+                                    <td>
+                                        Cantidad
+                                    </td>
+                                    <td>
+                                        Opciones
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody id="detalles-pedido">
+                                <!--listado de articulos-->
+                            </tbody>
+                        </table>
+                        <!--End Detalles-->
+                        <!--Ini "Inputs hidden Detalles"-->
+                        <div id="hiddens">
+                        </div>
+                        <!--End "Inputs hidden Detalles"-->
+                    </div>
+                </div>
+                <div class="bendl">
+                </div>
+                <div class="bendr">
+                </div>
+                <div class="form-actions">
+                    <a id="btnGrabar" class="btn btn-primary" href="#"><i class="icon-ok icon-white"></i>
+                        Grabar</a>
+                    <input id="SendForm" class="btn btn-primary" type="submit" value="enviar" style="visibility: hidden" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<!--ventana modal "Buscar Produtos"-->
+<div class="modal hide" id="myModal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+            ×</button>
+        <h3>
+            Buscar Producto</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row" style="margin-left: 10px" id="frmSelectArticulo">
+            <div class="span2">@Html.Label("Articulo :")</div>
+            <div class="span5">
+                <input id="ArticuloSearch" type="text" /></div>
+            <div class="span1">
+                <button class="btn" id="ActionSearchArticulo">
+                    ...</button>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 10px">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>
+                            Código
+                        </td>
+                        <td>
+                            Artículo
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="list-articulos">
+                    <!--listado de articulos-->
+                </tbody>
+            </table>
+        </div>
+        <br />
+    </div>
+    <div class="modal-footer">
+        <a id="myModal-close" href="#" class="btn" data-dismiss="modal">Salir</a>
+    </div>
+</div>
+<!--fin Ventana Modal-->
+<script src="@Url.Content("~/Scripts/Views/PedidosInsumos/Nuevo.js")" type="text/javascript"></script>

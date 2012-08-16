@@ -22,9 +22,9 @@ namespace SIGAPPBOM.Logistica.Infraestructura.Authentication
 
             var menuAlmacen = new Menu
             {
-                Titulo = "Almacen",
+                Titulo = "Salidas",
                 Controlador = "Almacen",
-                Accion = "Almacenes",
+                Accion = "MostrarSalidas",
                 SubMenus = new List<Menu>(),
                 Imagen = "icon-home icon-white"
             };

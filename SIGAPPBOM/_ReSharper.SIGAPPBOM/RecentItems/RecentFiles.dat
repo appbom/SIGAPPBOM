@@ -1,0 +1,54 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Web.Debug.config" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:packages.config" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Web.Release.config" caret="689" fromTop="13" />
+    <File id="9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575/d:Properties/f:AssemblyInfo.cs" caret="560" fromTop="6" />
+    <File id="0A9FD872-EDD1-488A-9644-51161D30D983/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+    <File id="DCE7760B-AE62-430A-8930-7863FE5B5F0A/d:Comun/f:Entidad.cs" caret="0" fromTop="0" />
+    <File id="DCE7760B-AE62-430A-8930-7863FE5B5F0A/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+    <File id="9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575/f:ServicioNHibernate.cs" caret="351" fromTop="12" />
+    <File id="9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575/d:Comun/f:Estado.cs" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/d:Views/d:PedidosInsumos/f:_AccionPedido.cshtml" caret="53" fromTop="1" />
+    <File id="0A9FD872-EDD1-488A-9644-51161D30D983/f:NHibernateConfigurator.cs" caret="182" fromTop="5" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/d:Controllers/f:PedidosInsumosController.cs" caret="385" fromTop="10" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/d:Controllers/f:AlmacenController.cs" caret="183" fromTop="5" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/f:LogisticaAreaRegistration.cs" caret="189" fromTop="7" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Web.config" caret="437" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Global.asax" caret="102" fromTop="1" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Global.asax.cs" caret="1233" fromTop="12" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Shared/f:_Layout.cshtml" caret="1766" fromTop="6" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Home/f:Index.cshtml" caret="372" fromTop="10" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:ChangePasswordSuccess.cshtml" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:Register.cshtml" caret="16" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:ChangePassword.cshtml" caret="17" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:LogOn.cshtml" caret="17" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Shared/f:_ERPMenu.cshtml" caret="1107" fromTop="28" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:HomeController.cs" caret="495" fromTop="7" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Shared/f:_MyLogOnPartial.cshtml" caret="320" fromTop="5" />
+    <File id="ADB9A3CD-570B-4E67-B516-4ABA7853294E/d:Authentication/f:IAuthenticationService.cs" caret="208" fromTop="5" />
+    <File id="ADB9A3CD-570B-4E67-B516-4ABA7853294E/d:Authentication/f:AuthenticationService.cs" caret="2528" fromTop="4" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:AccountController.cs" caret="1449" fromTop="13" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="DCE7760B-AE62-430A-8930-7863FE5B5F0A/d:Almacen/f:DetalleNotaSalida.cs" caret="0" fromTop="0" />
+    <File id="DCE7760B-AE62-430A-8930-7863FE5B5F0A/d:Almacen/f:DetalleNotaSalida.cs" caret="275" fromTop="8" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Administracion/f:AdministracionAreaRegistration.cs" caret="0" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/f:LogisticaAreaRegistration.cs" caret="0" fromTop="0" />
+    <File id="473173E7-B85F-4620-9EED-4BB48CC805B3/d:Logistica/d:Controller/f:AlmacenControllerTest.cs" caret="4595" fromTop="12" />
+    <File id="473173E7-B85F-4620-9EED-4BB48CC805B3/d:Logistica/d:Controller/f:AlmacenControllerTest.cs" caret="4595" fromTop="7" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Areas/d:Logistica/d:Views/d:PedidosInsumos/f:_AccionPedido.cshtml" caret="53" fromTop="1" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/f:Global.asax" caret="83" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:HomeController.cs" caret="495" fromTop="7" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Shared/f:_ERPMenu.cshtml" caret="150" fromTop="4" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:Register.cshtml" caret="16" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:ChangePassword.cshtml" caret="17" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Views/d:Account/f:LogOn.cshtml" caret="17" fromTop="0" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:AccountController.cs" caret="1664" fromTop="15" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:AccountController.cs" caret="1594" fromTop="10" />
+    <File id="ADB9A3CD-570B-4E67-B516-4ABA7853294E/d:Authentication/f:AuthenticationService.cs" caret="1786" fromTop="12" />
+    <File id="ADB9A3CD-570B-4E67-B516-4ABA7853294E/d:Authentication/f:AuthenticationService.cs" caret="2180" fromTop="16" />
+    <File id="1807C927-8672-428E-AA0F-6FC634810428/d:Controllers/f:AccountController.cs" caret="1299" fromTop="11" />
+  </RecentEdits>
+</RecentFiles>

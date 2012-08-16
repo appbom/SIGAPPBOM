@@ -1,0 +1,40 @@
+﻿@using SIGAPPBOM.Infraestructura.Authentication
+@using SIGAPPBOM.Web.HtmlHelpers
+
+<div class="container">
+    <a class="brand" dir="rtl">SIGAPPBOM</a>
+    <ul id="menuPrincipal" class="nav">
+        @if (Request.IsAuthenticated)
+        {
+            foreach (Menu mnu in ((IUserPrincipal)@ViewBag.Usuario).Menu)
+            {
+                if (mnu.SubMenus.Count > 0)
+                {
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                @Html.GlyphtImage(@mnu.Imagen) @mnu.Titulo<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    @foreach (Menu mnu2 in mnu.SubMenus)
+                    {
+                        <li><a href="#">@Html.GlyphtImage(@mnu2.Imagen) @mnu2.Titulo</a></li>
+                    }
+                </ul>
+            </li>
+                }
+                else
+                {
+            <li><a href="@Url.Action(@mnu.Accion, @mnu.Controlador)">@Html.GlyphtImage(@mnu.Imagen)
+                @mnu.Titulo</a></li>
+                }
+            }
+        }
+    </ul>
+    <ul class="nav pull-right">
+        @Html.Partial("_MyLogOnPartial")
+    </ul>
+</div>
+<input id="selected-menu" type="hidden" value="@ViewBag.Menu" />
+<script type="text/javascript">
+    var idMenu = $("#selected-menu").val();
+    $("#" + idMenu).toggleClass("active");
+</script>
+

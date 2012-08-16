@@ -1,0 +1,11 @@
+<Modules>
+  <Module PersistentId="DCE7760B-AE62-430A-8930-7863FE5B5F0A" ModuleId="SIGAPPBOM.Dominio" />
+  <Module PersistentId="1807C927-8672-428E-AA0F-6FC634810428" ModuleId="SIGAPPBOM.Web" />
+  <Module PersistentId="9CD6ACF9-DAC1-42D8-BF5D-3DF5E7F55575" ModuleId="SIGAPPBOM.Servicio" />
+  <Module PersistentId="ADB9A3CD-570B-4E67-B516-4ABA7853294E" ModuleId="SIGAPPBOM.Infraestructura" />
+  <Module PersistentId="FBC1DB5B-CF35-4EE6-AF1D-B8756949D68E" ModuleId="SIGAPPBOM.Servicio.Unit.Test" />
+  <Module PersistentId="0A9FD872-EDD1-488A-9644-51161D30D983" ModuleId="SIGAPPBOM.NHibernate" />
+  <Module PersistentId="971EECF4-3EC0-4EDF-BACA-0575B5117551" ModuleId="SIGAPPBOM.Servicio.Integracion.Test" />
+  <Module PersistentId="E852030C-F279-446D-BD5C-CE4ADDB92B09" ModuleId="SIGAPPBOM.NHibernate.Integracion.Test" />
+  <Module PersistentId="473173E7-B85F-4620-9EED-4BB48CC805B3" ModuleId="SIGAPPBOM.Web.Unit.Test" />
+</Modules>

@@ -1,0 +1,16 @@
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.NHibernate.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\FluentNHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\Iesi.Collections.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.Dominio.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.Infraestructura.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\uNhAddIns.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.Dominio.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\SIGAPPBOM.Logistica.Infraestructura.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\FluentNHibernate.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\Iesi.Collections.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\bin\Debug\NHibernate.xml
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\obj\Debug\SIGAPPBOM.Logistica.NHibernate.dll
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\obj\Debug\SIGAPPBOM.Logistica.NHibernate.pdb
+D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.NHibernate\obj\Debug\ResolveAssemblyReference.cache
