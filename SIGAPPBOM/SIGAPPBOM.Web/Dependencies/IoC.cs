@@ -1,12 +1,12 @@
 using System.Web.Mvc;
 using AutoMapper;
 using NHibernate;
-using SIGAPPBOM.Dominio.Pedidos;
+using SIGAPPBOM.Dominio.Logistica.Pedidos;
 using SIGAPPBOM.Infraestructura.Authentication;
 using SIGAPPBOM.Infraestructura.UnitOfWork;
 using SIGAPPBOM.NHibernate.Repositorios;
 using SIGAPPBOM.Servicio;
-using SIGAPPBOM.Servicio.Pedidos;
+using SIGAPPBOM.Servicio.Logistica.Pedidos;
 using StructureMap;
 
 namespace SIGAPPBOM.Web.Dependencies

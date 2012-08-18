@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using SIGAPPBOM.Dominio.Pedidos;
+using SIGAPPBOM.Dominio.Logistica.Pedidos;
 
 namespace SIGAPPBOM.Servicio.MappingResolvers
 {

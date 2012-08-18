@@ -1,9 +1,0 @@
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\SIGAPPBOM.Logistica.Infraestructura.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\SIGAPPBOM.Logistica.Infraestructura.pdb
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\Iesi.Collections.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\NHibernate.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\Iesi.Collections.xml
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\bin\Debug\NHibernate.xml
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\obj\Debug\SIGAPPBOM.Logistica.Infraestructura.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\obj\Debug\SIGAPPBOM.Logistica.Infraestructura.pdb
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Infraestructura\obj\Debug\ResolveAssemblyReference.cache

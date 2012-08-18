@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using AutoMapper;
 using NUnit.Framework;
-using SIGAPPBOM.Dominio.Articulos;
-using SIGAPPBOM.Dominio.Pedidos;
+using SIGAPPBOM.Dominio.Logistica.Articulos;
+using SIGAPPBOM.Dominio.Logistica.Pedidos;
 using SIGAPPBOM.Infraestructura.UnitOfWork;
 using SIGAPPBOM.NHibernate.Repositorios;
 using SIGAPPBOM.Web.Bootstraper;

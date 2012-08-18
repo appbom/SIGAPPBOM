@@ -35,15 +35,16 @@ namespace SIGAPPBOM.Web.Controllers
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
                         return Redirect(returnUrl);
-                    }
-                    return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Logistica" });
-                    //if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteLogistica"))
-                    //    return RedirectToAction("Index", "Home");
+                    
+                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteLogistica"))
+                        return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Logistica" });
 
-                    //if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteProduccion"))
-                    //    return RedirectToAction("Index", "Home");
+                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteProduccion"))
+                        return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Produccion" });
+
+                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("Administrador"))
+                        return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Administracion" });
                 }
                 else
                 {

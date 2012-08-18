@@ -1,5 +1,0 @@
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Dominio\bin\Debug\SIGAPPBOM.Logistica.Dominio.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Dominio\bin\Debug\SIGAPPBOM.Logistica.Dominio.pdb
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Dominio\obj\Debug\SIGAPPBOM.Logistica.Dominio.dll
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Dominio\obj\Debug\SIGAPPBOM.Logistica.Dominio.pdb
-D:\Desarrollo\Repositorios Github\SIGAPPBOM\Logistica\Logistica.Dominio\obj\Debug\ResolveAssemblyReference.cache

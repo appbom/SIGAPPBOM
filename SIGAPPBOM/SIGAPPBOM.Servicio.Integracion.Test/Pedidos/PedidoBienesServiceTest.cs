@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
-using SIGAPPBOM.Dominio.Articulos;
-using SIGAPPBOM.Dominio.Pedidos;
+using SIGAPPBOM.Dominio.Logistica.Articulos;
+using SIGAPPBOM.Dominio.Logistica.Pedidos;
 using SIGAPPBOM.Servicio.Comun;
-using SIGAPPBOM.Servicio.Pedidos;
+using SIGAPPBOM.Servicio.Logistica.Pedidos;
 using SIGAPPBOM.Servicio.ViewModels;
 using StructureMap;
 

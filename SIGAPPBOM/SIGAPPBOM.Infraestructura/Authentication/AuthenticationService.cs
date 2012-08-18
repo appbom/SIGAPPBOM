@@ -76,7 +76,14 @@ namespace SIGAPPBOM.Infraestructura.Authentication
             return userIdentity;
         }
 
+        public IList GetRoles(string usuario)
+        {
+            var user = usuarios.SingleOrDefault(x => x.Nombre == usuario);
+            if (user == null)
+                return null;
 
+            return (IList)user.Roles;
+        }
     }
 
     class Usuario

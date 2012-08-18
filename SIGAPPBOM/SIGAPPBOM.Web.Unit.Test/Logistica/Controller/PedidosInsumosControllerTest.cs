@@ -4,9 +4,9 @@ using System.Web.Mvc;
 using Moq;
 using NUnit.Framework;
 using SIGAPPBOM.Infraestructura.Authentication;
-using SIGAPPBOM.Servicio.Articulos;
 using SIGAPPBOM.Servicio.Comun;
-using SIGAPPBOM.Servicio.Pedidos;
+using SIGAPPBOM.Servicio.Logistica.Articulos;
+using SIGAPPBOM.Servicio.Logistica.Pedidos;
 using SIGAPPBOM.Servicio.ViewModels;
 using SIGAPPBOM.Web.Areas.Logistica.Controllers;
 

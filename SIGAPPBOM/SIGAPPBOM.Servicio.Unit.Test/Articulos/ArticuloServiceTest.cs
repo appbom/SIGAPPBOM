@@ -2,9 +2,9 @@
 using System.Linq;
 using NUnit.Framework;
 using Moq;
-using SIGAPPBOM.Dominio.Articulos;
+using SIGAPPBOM.Dominio.Logistica.Articulos;
 using SIGAPPBOM.NHibernate.Repositorios;
-using SIGAPPBOM.Servicio.Articulos;
+using SIGAPPBOM.Servicio.Logistica.Articulos;
 
 namespace SIGAPPBOM.Servicio.Unit.Test.Articulos
 {

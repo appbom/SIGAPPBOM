@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using SIGAPPBOM.Dominio.Articulos;
+using SIGAPPBOM.Dominio.Logistica.Articulos;
 using SIGAPPBOM.Infraestructura.UnitOfWork;
 using SIGAPPBOM.NHibernate.Repositorios;
 using SIGAPPBOM.Servicio;

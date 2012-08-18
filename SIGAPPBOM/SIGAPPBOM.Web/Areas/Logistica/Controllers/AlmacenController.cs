@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using SIGAPPBOM.Infraestructura.Authentication;
-using SIGAPPBOM.Servicio.Almacen;
-using SIGAPPBOM.Servicio.Pedidos;
+using SIGAPPBOM.Servicio.Logistica.Almacen;
+using SIGAPPBOM.Servicio.Logistica.Pedidos;
 
 namespace SIGAPPBOM.Web.Areas.Logistica.Controllers
 {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using AutoMapper;
-using SIGAPPBOM.Dominio.Almacen;
+using SIGAPPBOM.Dominio.Logistica.Almacen;
 
 namespace SIGAPPBOM.Servicio.MappingResolvers
 {
