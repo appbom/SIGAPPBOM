@@ -1,0 +1,18 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+        class="icon-user icon-white"></i><text>  @User.Identity.Name</text><b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon-home"></i> Inicio</a></li>
+            <li><a href="#"><i class="icon-camera"></i> Perfil</a></li>
+            <li class="divider"></li>
+            <li><a href="@Url.Action("LogOff", "Account")"><i class="icon-off"></i> Salir</a></li>           
+        </ul>
+    </li>  
+}
+else
+{
+    <li>
+        @Html.ActionLink("Log On", "LogOn", "Account")
+    </li>
+}

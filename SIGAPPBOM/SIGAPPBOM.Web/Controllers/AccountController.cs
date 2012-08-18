@@ -36,15 +36,15 @@ namespace SIGAPPBOM.Web.Controllers
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                         return Redirect(returnUrl);
-                    
-                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteLogistica"))
+
+                    if (authenticationService.GetRoles(model.UserName).Contains("AsistenteLogistica"))
                         return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Logistica" });
 
-                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("AsistenteProduccion"))
-                        return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Produccion" });
+                    if (authenticationService.GetRoles(model.UserName).Contains("AsistenteProduccion"))
+                        return RedirectToAction("OperacionInvalida", "Errores", new { area = "Produccion" });
 
-                    if (authenticationService.ObtienerInformacionUsuario().Roles.Contains("Administrador"))
-                        return RedirectToAction("MostrarPedidos", "PedidosInsumos", new { area = "Administracion" });
+                    if (authenticationService.GetRoles(model.UserName).Contains("Administrador"))
+                        return RedirectToAction("MostrarArticulos", "Articulos", new { area = "Administracion" });
                 }
                 else
                 {

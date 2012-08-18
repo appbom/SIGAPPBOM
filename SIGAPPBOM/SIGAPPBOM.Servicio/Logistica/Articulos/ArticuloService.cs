@@ -32,5 +32,13 @@ namespace SIGAPPBOM.Servicio.Logistica.Articulos
             }
             return mappingEngine.Map<List<Articulo>, List<ArticuloViewModel>>(articulos); ;
         }
+
+
+        public IList<ArticuloViewModel> TraerTodo()
+        {
+            var articulos = articuloRepositorio.TraerTodo().ToList();
+
+            return mappingEngine.Map<List<Articulo>, List<ArticuloViewModel>>(articulos);
+        }
     }
 }

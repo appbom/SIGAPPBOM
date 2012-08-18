@@ -29,6 +29,15 @@ namespace SIGAPPBOM.Infraestructura.Authentication
                 Imagen = "icon-home icon-white"
             };
 
+            var menuArticulos = new Menu
+            {
+                Titulo = "Articulos",
+                Controlador = "Articulos",
+                Accion = "MostrarArticulos",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-home icon-white"
+            };
+
             usuarios = new List<Usuario>
                            {
                               new Usuario
@@ -51,7 +60,14 @@ namespace SIGAPPBOM.Infraestructura.Authentication
                                        Password = "123456",
 									   Menus = new List<Menu> {menuPedidos,menuAlmacen },
                                        Roles = new List<string>{"AsistenteProduccion"}
-                                   }
+                                   },
+                               new Usuario
+                               {
+                                   Nombre = "admin",
+                                   Password = "admin",
+							       Menus = new List<Menu> {menuArticulos},
+                                   Roles = new List<string>{"Administrador"}
+                               }
                            };
         }
 

@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\ArticulosControllerTest.cs" />
     <Compile Include="Logistica\Controller\AlmacenControllerTest.cs" />
     <Compile Include="Logistica\Controller\PedidosInsumosControllerTest.cs" />
     <Compile Include="Mapeo\ConfigurationTest.cs" />
@@ -79,9 +80,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administracion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

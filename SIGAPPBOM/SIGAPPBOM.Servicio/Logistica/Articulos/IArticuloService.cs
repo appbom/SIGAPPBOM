@@ -7,5 +7,6 @@ namespace SIGAPPBOM.Servicio.Logistica.Articulos
     {
         List<string> Errores { get; set; }
         IList<ArticuloViewModel> TraerListaPor(string nombreArticulo);
+        IList<ArticuloViewModel> TraerTodo();
     }
 }
