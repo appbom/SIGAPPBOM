@@ -1,0 +1,368 @@
+﻿@model SIGAPPBOM.Servicio.ViewModels.MenuViewModel
+@{ 
+    Html.EnableClientValidation(true);
+    
+}
+@using (Html.BeginForm("Nuevo", "Menu"))
+{
+    <script src="@Url.Content("~/Scripts/jquery-customvalidation.js")" type="text/javascript"></script>  
+    @Html.ValidationSummary(true)
+
+    <div class="container">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@ViewBag.Titulo
+                </h2>
+                <a class="pull-right linksInTitle" href="@Url.Action("MostrarMenu", "Menu")">
+                << Menues</a>
+            </div>
+            <div class="block_content">
+                <!--ini cabecera-->
+                <div class="row" style="margin-left: 20px">
+                    <div class="span10">
+                        <p>
+                            &nbsp;</p>
+                        <div class="control-group">
+                            <label class="control-label" for="inputIcon">Titulo</label>
+                            <div class="controls">
+                            <div class="input-prepend">
+                            <span class="add-on"><i class="icon-font"></i></span><input class="span4" id="inputIcon" type="text" />
+                            </div>
+                            </div>
+
+                            <label class="control-label" for="inputIcon">Controlador</label>
+                            <div class="controls">
+                            <div class="input-prepend">
+                            <span class="add-on"><i class="icon-folder-open"></i></span><input class="span4" id="inputIcon2" type="text" />
+                            </div>
+                            </div>
+
+                            <label class="control-label" for="inputIcon">Accion</label>
+                            <div class="controls">
+                            <div class="input-prepend">
+                            <span class="add-on"><i class="icon-cog"></i></span><input class="span4" id="inputIcon3" type="text" />
+                            </div>
+                            </div>
+
+                            <label class="control-label" for="inputIcon">Imagen</label>
+                            <div class="controls">
+                            <div class="input-prepend">
+                            <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon4" type="text" />
+                            <a href="#myModal" role="button" class="btn" data-toggle="modal">...</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fin cabecera-->
+                <!--Ini "Inputs hidden Detalles"-->
+                <div id="hiddens">
+                </div>
+                <!--End "Inputs hidden Detalles"-->
+                <div class="bendl">
+                </div>
+                <div class="bendr">
+                </div>
+                <div class="form-actions">
+                    <a id="btnGrabar" class="btn btn-primary" href="#"><i class="icon-ok icon-white"></i>
+                        Grabar</a>
+                    <input id="SendForm" class="btn btn-primary" type="submit" value="enviar" style="visibility: hidden" />
+                </div>
+                <!-- Modal -->
+                <div class="modal hide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">Iconos</h3>
+                    </div>
+                    <div class="modal-body row" style="margin-left: 10px">
+                     
+                    <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" /><i class="icon-envelope"></i> icon-envelope</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios5" value="option5" /><i class="icon-user"></i> icon-user</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios6" value="option6" /><i class="icon-th-list"></i> icon-th-list</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios7" value="option7" /><i class="icon-heart"></i> icon-heart</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios8" value="option8" /><i class="icon-star"></i> icon-star</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios9" value="option9" /><i class="icon-star-empty"></i> icon-star-empty</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios10" value="option10" /><i class="icon-film"></i> icon-film</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios11" value="option11" /><i class="icon-th-large"></i> icon-th-large</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios12" value="option12" /><i class="icon-th"></i> icon-th</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios13" value="option13" /><i class="icon-ok"></i> icon-ok</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios14" value="option14" /><i class="icon-remove"></i> icon-remove</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios15" value="option15" /><i class="icon-zoom-in"></i> icon-zoom-in</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios16" value="option16" /><i class="icon-zoom-out"></i> icon-zoom-out</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios17" value="option17" /><i class="icon-trash"></i> icon-trash</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios18" value="option18" /><i class="icon-road"></i> icon-road</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios19" value="option19" /><i class="icon-off"></i> icon-off</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios20" value="option20" /><i class="icon-signal"></i> icon-signal</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios21" value="option21" /><i class="icon-cog"></i> icon-cog</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios22" value="option22" /><i class="icon-home"></i> icon-home</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios23" value="option23" /><i class="icon-file"></i> icon-file</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios24" value="option24" /><i class="icon-time"></i> icon-time</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios25" value="option25" /><i class="icon-download-alt"></i> icon-download-alt</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios26" value="option26" /><i class="icon-download"></i> icon-download</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios27" value="option27" /><i class="icon-upload"></i> icon-upload</td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios28" value="option28" /><i class="icon-inbox"></i> icon-inbox</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios29" value="option29" /><i class="icon-list-alt"></i> icon-list-alt</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios30" value="option30" /><i class="icon-volume-off"></i> icon-volume-off</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios31" value="option31" /><i class="icon-play-circle"></i> icon-play-circle</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios32" value="option32" /><i class="icon-repeat"></i> icon-repeat</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios33" value="option33" /><i class="icon-refresh"></i> icon-refresh</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios34" value="option33" /><i class="icon-lock"></i> icon-lock</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios35" value="option35" /><i class="icon-flag"></i> icon-flag</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios36" value="option36" /><i class="icon-headphones"></i> icon-headphones</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios37" value="option37" /><i class="icon-volume-down"></i> icon-volume-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios38" value="option38" /><i class="icon-volume-up"></i> icon-volume-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios39" value="option39" /><i class="icon-qrcode"></i> icon-qrcode</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios40" value="option40" /><i class="icon-barcode"></i> icon-barcode</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios41" value="option41" /><i class="icon-bookmark"></i> icon-bookmark</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios42" value="option42" /><i class="icon-bold"></i> icon-bold</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios43" value="option43" /><i class="icon-tag"></i> icon-tag</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios44" value="option44" /><i class="icon-tags"></i> icon-tags</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios45" value="option45" /><i class="icon-book"></i> icon-book</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios46" value="option1" /><i class="icon-print"></i> icon-print</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios47" value="option1" /><i class="icon-camera"></i> icon-camera</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios48" value="option1" /><i class="icon-font"></i> icon-font</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios49" value="option1" /><i class="icon-align-left"></i> icon-align-left</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios50" value="option1" /><i class="icon-list"></i> icon-list</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios51" value="option1" /><i class="icon-picture"></i> icon-picture</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios52" value="option1" /><i class="icon-italic"></i> icon-italic</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios53" value="option1" /><i class="icon-text-height"></i> icon-text-height</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios54" value="option1" /><i class="icon-text-width"></i> icon-text-width</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios55" value="option1" /><i class="icon-align-center"></i> icon-align-center</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios56" value="option1" /><i class="icon-align-right"></i> icon-align-right</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios57" value="option1" /><i class="icon-align-justify"></i> icon-align-justify</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios58" value="option1" /><i class="icon-indent-left"></i> icon-indent-left</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios59" value="option1" /><i class="icon-indent-right"></i> icon-indent-right</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios60" value="option1" /><i class="icon-facetime-video"></i> icon-facetime-video</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios61" value="option1" /><i class="icon-pencil"></i> icon-pencil</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios62" value="option1" /><i class="icon-map-marker"></i> icon-map-marker</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios63" value="option1" /><i class="icon-adjust"></i> icon-adjust</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios64" value="option1" /><i class="icon-tint"></i> icon-tint</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios65" value="option1" /><i class="icon-move"></i> icon-move</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios66" value="option1" /><i class="icon-play"></i> icon-play</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios67" value="option1" /><i class="icon-edit"></i> icon-edit</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios68" value="option1" /><i class="icon-share"></i> icon-share</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios69" value="option1" /><i class="icon-check"></i> icon-check</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios70" value="option1" /><i class="icon-step-backward"></i> icon-step-backward</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios71" value="option1" /><i class="icon-fast-backward"></i> icon-fast-backward</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios72" value="option1" /><i class="icon-backward"></i> icon-backward</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios73" value="option1" /><i class="icon-pause"></i> icon-pause</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios74" value="option1" /><i class="icon-stop"></i> icon-stop</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios75" value="option1" /><i class="icon-forward"></i> icon-forward</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios76" value="option1" /><i class="icon-fast-forward"></i> icon-fast-forward</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios77" value="option1" /><i class="icon-chevron-right"></i> icon-chevron-right</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios78" value="option1" /><i class="icon-ok-sign"></i> icon-ok-sign</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios79" value="option1" /><i class="icon-step-forward"></i> icon-step-forward</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios80" value="option1" /><i class="icon-eject"></i> icon-eject</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios81" value="option1" /><i class="icon-chevron-left"></i> icon-chevron-left</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios82" value="option1" /><i class="icon-plus-sign"></i> icon-plus-sign</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios83" value="option1" /><i class="icon-minus-sign"></i> icon-minus-sign</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios84" value="option1" /><i class="icon-remove-sign"></i> icon-remove-sign</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios85" value="option1" /><i class="icon-question-sign"></i> icon-question-sign</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios86" value="option1" /><i class="icon-info-sign"></i> icon-info-sign</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios87" value="option1" /><i class="icon-screenshot"></i> icon-screenshot</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios88" value="option1" /><i class="icon-arrow-right"></i> icon-arrow-right</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios89" value="option1" /><i class="icon-resize-full"></i> icon-resize-full</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios90" value="option1" /><i class="icon-remove-circle"></i> icon-remove-circle</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios91" value="option1" /><i class="icon-ok-circle"></i> icon-ok-circle</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios92" value="option1" /><i class="icon-ban-circle"></i> icon-ban-circle</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios93" value="option1" /><i class="icon-arrow-left"></i> icon-arrow-left</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios94" value="option1" /><i class="icon-arrow-up"></i> icon-arrow-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios95" value="option1" /><i class="icon-arrow-down"></i> icon-arrow-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios96" value="option1" /><i class="icon-share-alt"></i> icon-share-alt</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios97" value="option1" /><i class="icon-resize-small"></i> icon-resize-small</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios98" value="option1" /><i class="icon-plus"></i> icon-plus</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios99" value="option1" /><i class="icon-minus"></i> icon-minus</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios100" value="option1" /><i class="icon-exclamation-sign"></i> icon-exclamation-sign</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios101" value="option1" /><i class="icon-gift"></i> icon-gift</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios102" value="option1" /><i class="icon-leaf"></i> icon-leaf</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios103" value="option1" /><i class="icon-eye-open"></i> icon-eye-open</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios104" value="option1" /><i class="icon-eye-close"></i> icon-eye-close</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios105" value="option1" /><i class="icon-warning-sign"></i> icon-warning-sign</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios106" value="option1" /><i class="icon-magnet"></i> icon-magnet</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios107" value="option1" /><i class="icon-shopping-cart"></i> icon-shopping-cart</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios108" value="option1" /><i class="icon-resize-horizontal"></i> icon-resize-horizontal</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios109" value="option1" /><i class="icon-calendar"></i> icon-calendar</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios110" value="option1" /><i class="icon-random"></i> icon-random</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios111" value="option1" /><i class="icon-comment"></i> icon-comment</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios112" value="option1" /><i class="icon-chevron-up"></i> icon-chevron-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios113" value="option1" /><i class="icon-chevron-down"></i> icon-chevron-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios114" value="option1" /><i class="icon-retweet"></i> icon-retweet</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios115" value="option1" /><i class="icon-folder-close"></i> icon-folder-close</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios116" value="option1" /><i class="icon-folder-open"></i> icon-folder-open</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios117" value="option1" /><i class="icon-resize-vertical"></i> icon-resize-vertical</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios118" value="option1" /><i class="icon-hdd"></i> icon-hdd</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios119" value="option1" /><i class="icon-bullhorn"></i> icon-bullhorn</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios120" value="option1" /><i class="icon-bell"></i> icon-bell</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios121" value="option1" /><i class="icon-hand-left"></i> icon-hand-left</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios122" value="option1" /><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios123" value="option1" /><i class="icon-wrench"></i> icon-wrench</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios124" value="option1" /><i class="icon-thumbs-up"></i> icon-thumbs-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios125" value="option1" /><i class="icon-thumbs-down"></i> icon-thumbs-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios126" value="option1" /><i class="icon-hand-right"></i> icon-hand-right</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios127" value="option1" /><i class="icon-hand-up"></i> icon-hand-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios128" value="option1" /><i class="icon-hand-down"></i> icon-hand-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios129" value="option1" /><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios130" value="option1" /><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios131" value="option1" /><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios132" value="option1" /><i class="icon-globe"></i> icon-globe</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios133" value="option1" /><i class="icon-tasks"></i> icon-tasks</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios134" value="option1" /><i class="icon-filter"></i> icon-filter</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios135" value="option1" /><i class="icon-briefcase"></i> icon-briefcase</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios136" value="option1" /><i class="icon-fullscreen"></i> icon-fullscreen</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios137" value="option1" /><i class="icon-asterisk"></i> icon-asterisk</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios138" value="option1" /><i class="icon-certificate"></i> icon-certificate</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios139" value="optionicon-plane" /><i class="icon-plane"></i> icon-plane</td>
+                        <td style="font-size: 13px"><input type="radio" name="optionsRadios" id="optionsRadios140" value="icon-fire" /><i class="icon-fire"></i> icon-fire</td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+                   
+                    </div>
+                    <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                   
+                    <button id="btnSeleccionar" class="btn btn-primary">Seleccionar</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    function GenerarDetalles() {
+        $("#hiddens").html("");
+        var itemHidden = '<input type="hidden" name="Titulo" value="' + $("#inputIcon").val() + '" /> ';
+        itemHidden += '<input type="hidden" name="Controlador" value="' + $("#inputIcon2").val() + '" /> ';
+        itemHidden += '<input type="hidden" name="Accion" value="' + $("#inputIcon3").val() + '" /> ';
+        itemHidden += '<input type="hidden" name="Imagen" value="' + $("#inputIcon4").val() + '" /> ';
+        $("#hiddens").append(itemHidden);
+    }
+
+    function Selecciona()
+    {
+        var optionsRadios = document.getElementsByName('optionsRadios');
+        var ischecked_method = false;
+         alert("hola");
+     /*   for ( var i = 0; i &lt; optionsRadios.length; i++) {
+            if(optionsRadios[i].checked) {
+                ischecked_method = true;
+                var slect=optionsRadios[i].toString();
+                alert(slect);
+            }
+        }*/
+        if(!ischecked_method)   { //payment method button is not checked
+            alert("Please choose optionsRadios");
+        }
+    }
+    
+    $("#btnGrabar").click(function () {
+        GenerarDetalles();
+        $("#SendForm").click();
+    })
+    $("#btnSeleccionar").click(function () {
+        Selecciona();
+    })
+    $('#myModal').modal('hide');
+</script>
+

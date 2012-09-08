@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SIGAPPBOM.Servicio.ViewModels.UsuarioViewModel>
+<div class="span2">
+    <div class="well">
+        <ul class="nav nav-list">
+            <li class="nav-header" style="padding-bottom: 20px">Menú - Usuario</li>
+            <li class="active"><a href="#">Listar</a></li>
+            <li><a href="#">Nuevo</a></li>
+            <li><a href="#">Otro</a></li>
+            <li style="padding-bottom: 400px"></li>
+        </ul>
+    </div>
+</div>
+<div class="span9">
+    <div class="well well-large" style="background-color: transparent">
+        <div class="block">
+            <div class="block_head">
+                <div class="bheadl">
+                </div>
+                <div class="bheadr">
+                </div>
+                <h2>@ViewBag.Titulo
+                </h2>
+                <a class="pull-right" href="@Url.Action("Nuevo", "Usuario")">Nuevo</a>
+            </div>
+            <div class="block_content">
+                <span>&nbsp;</span>
+                <div>
+                    <table class="table table-bordered table-condensed table-cabecera">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Password
+                                </th>
+                                <th style="max-width:60px;min-width:50px">
+                                    
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                ViewBag.usuarioId = item.Id;
+                             
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Password)
+                                    </td>
+                                    <td style="min-width: 50px; max-width: 60px">
+                                        @Html.Partial("_AccionUsuario", item.Id)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @if (!string.IsNullOrEmpty(ViewBag.Mensaje))
+                {
+                    <div id="msg-alert" class="alert" style="text-align: center;">
+                        <span id="msg-alert-message">
+                            @ViewBag.Mensaje
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

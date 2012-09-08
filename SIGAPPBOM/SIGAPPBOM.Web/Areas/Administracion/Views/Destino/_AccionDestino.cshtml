@@ -1,0 +1,14 @@
+﻿@{int destinoId = ViewBag.destinoId;}
+@using SIGAPPBOM.Servicio.Comun
+
+<div class="btn-group">
+    <a class="btn btn-mini" href="#"><i class="icon-cog"></i></a>
+    <button class="btn dropdown-toggle btn-mini" data-toggle="dropdown" title="Acción">
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("Editar", new { destinoId = destinoId })"><i class="icon-list-alt"></i>  Editar</a></li>
+        <li><a href="@Url.Action("Eliminar", new { destinoId = destinoId })"><i class="icon-trash"></i>  Eliminar</a></li> 
+       
+    </ul>
+</div>
