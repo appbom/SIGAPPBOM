@@ -26,3 +26,31 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\FluentNH
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\SIGAPPBOM.Web.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\SIGAPPBOM.Web.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Web.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Web.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\AutoMapper.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\EntityFramework.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\Iesi.Collections.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\MySql.Data.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\MySql.Web.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Servicio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\StructureMap.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\FluentNHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.NHibernate.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\SIGAPPBOM.Servicio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\AutoMapper.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\EntityFramework.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\Iesi.Collections.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\NHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\StructureMap.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\StructureMap.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\bin\FluentNHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\SIGAPPBOM.Web.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\SIGAPPBOM.Web.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Web\obj\Debug\SIGAPPBOM.Web.pdb

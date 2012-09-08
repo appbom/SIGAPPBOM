@@ -35,9 +35,90 @@ namespace SIGAPPBOM.Infraestructura.Authentication
                 Controlador = "Articulos",
                 Accion = "MostrarArticulos",
                 SubMenus = new List<Menu>(),
+                Imagen = "icon-tags icon-white"
+            };
+
+            var menuProductor = new Menu
+            {
+                Titulo = "Productores",
+                Controlador = "Productor",
+                Accion = "MostrarProductor",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-user icon-white"
+            };
+			
+			var menuParcelas = new Menu
+            {
+                Titulo = "Parcelas",
+                Controlador = "Parcela",
+                Accion = "MostrarParcela",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-leaf icon-white"
+            };
+			
+			var menuEmpacadoras = new Menu
+            {
+                Titulo = "Empacadoras",
+                Controlador = "Empacadora",
+                Accion = "MostrarEmpacadora",
+                SubMenus = new List<Menu>(),
                 Imagen = "icon-home icon-white"
             };
 
+			var menuDestinos = new Menu
+            {
+                Titulo = "Destinos",
+                Controlador = "Destino",
+                Accion = "MostrarDestino",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-flag icon-white"
+            };
+			
+			var menuUsuario = new Menu
+            {
+                Titulo = "Usuarios",
+                Controlador = "Usuario",
+                Accion = "MostrarUsuario",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-user icon-white"
+            };
+			/*
+			var menuRolUsuarios = new Menu
+            {
+                Titulo = "RolUsuarios",
+                Controlador = "RolUsuario",
+                Accion = "MostrarRolUsuario",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-home icon-white"
+            };
+			*/
+			var menuRoles = new Menu
+            {
+                Titulo = "Roles",
+                Controlador = "Rol",
+                Accion = "MostrarRol",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-lock icon-white"
+            };
+
+            var menuPersonas = new Menu
+            {
+                Titulo = "Personas",
+                Controlador = "Persona",
+                Accion = "MostrarPersona",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-user icon-white"
+            };
+
+			var menuMenues = new Menu
+            {
+                Titulo = "Menues",
+                Controlador = "Menu",
+                Accion = "MostrarMenu",
+                SubMenus = new List<Menu>(),
+                Imagen = "icon-th-list icon-white"
+            };
+			
             usuarios = new List<Usuario>
                            {
                               new Usuario
@@ -65,7 +146,7 @@ namespace SIGAPPBOM.Infraestructura.Authentication
                                {
                                    Nombre = "admin",
                                    Password = "admin",
-							       Menus = new List<Menu> {menuArticulos},
+							       Menus = new List<Menu> {menuArticulos,menuProductor,menuParcelas,menuEmpacadoras,menuDestinos,menuUsuario,menuRoles,menuMenues,menuPersonas},
                                    Roles = new List<string>{"Administrador"}
                                }
                            };

@@ -7,3 +7,12 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\SIGAPPBOM.Infraestructura.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\Iesi.Collections.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\Iesi.Collections.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\bin\Debug\NHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\SIGAPPBOM.Infraestructura.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Infraestructura\obj\Debug\SIGAPPBOM.Infraestructura.pdb

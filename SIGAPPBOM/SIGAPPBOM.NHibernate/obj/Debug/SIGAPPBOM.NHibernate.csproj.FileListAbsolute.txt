@@ -14,3 +14,19 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\D
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.NHibernate.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\FluentNHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\Iesi.Collections.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\uNhAddIns.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\FluentNHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\Iesi.Collections.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\bin\Debug\NHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.NHibernate\obj\Debug\SIGAPPBOM.NHibernate.pdb

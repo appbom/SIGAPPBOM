@@ -54,8 +54,16 @@
   <ItemGroup>
     <Compile Include="Almacen\NotaSalidaRepositorioTest.cs" />
     <Compile Include="Articulos\ArticuloRepositorioTest.cs" />
+    <Compile Include="Destinos\DestinoRepositorioTest.cs" />
+    <Compile Include="Empacadoras\EmpacadoraRepositorioTest.cs" />
+    <Compile Include="Menues\MenuRepositorioTest.cs" />
+    <Compile Include="Parcelas\ParcelaRepositorioTest.cs" />
     <Compile Include="Pedidos\PedidoRepositorioTest.cs" />
+    <Compile Include="Productores\ProductorRepositorioTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\RolRepositorioTest.cs" />
+    <Compile Include="RolUsuarios\RolUsuarioRepositorioTest.cs" />
+    <Compile Include="Usuarios\UsuarioRepositorioTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,6 +91,7 @@
       <Name>SIGAPPBOM.Web</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

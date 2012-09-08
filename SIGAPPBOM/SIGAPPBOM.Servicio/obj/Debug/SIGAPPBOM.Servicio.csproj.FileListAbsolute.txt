@@ -20,3 +20,25 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Deb
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\SIGAPPBOM.Servicio.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\SIGAPPBOM.Servicio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Servicio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Servicio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\AutoMapper.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\Iesi.Collections.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\StructureMap.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\FluentNHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.NHibernate.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\AutoMapper.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\Iesi.Collections.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\NHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\StructureMap.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\StructureMap.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\FluentNHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\bin\Debug\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\SIGAPPBOM.Servicio.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\SIGAPPBOM.Servicio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio\obj\Debug\SIGAPPBOM.Servicio.pdb

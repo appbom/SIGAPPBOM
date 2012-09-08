@@ -3,3 +3,7 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\bin\Debu
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\obj\Debug\SIGAPPBOM.Dominio.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\obj\Debug\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\bin\Debug\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\bin\Debug\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\obj\Debug\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Dominio\obj\Debug\SIGAPPBOM.Dominio.pdb

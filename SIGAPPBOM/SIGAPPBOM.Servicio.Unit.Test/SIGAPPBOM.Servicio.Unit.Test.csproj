@@ -49,10 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APPBOM\Personas\PersonaServiceTest.cs" />
     <Compile Include="Articulos\ArticuloServiceTest.cs" />
+    <Compile Include="Destinos\DestinoServiceTest.cs" />
+    <Compile Include="Empacadoras\EmpacadoraServiceTest.cs" />
+    <Compile Include="Menues\MenuServiceTest.cs" />
+    <Compile Include="Parcelas\ParcelaServiceTest.cs" />
     <Compile Include="Pedidos\PedidoBienesServiceTest.cs" />
+    <Compile Include="Pedidos\ProductorServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\RolServiceTest.cs" />
+    <Compile Include="RolUsuarios\RolUsuarioServiceTest.cs" />
     <Compile Include="ServiciosTest.cs" />
+    <Compile Include="Usuarios\UsuarioServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -74,6 +83,9 @@
       <Project>{1807C927-8672-428E-AA0F-6FC634810428}</Project>
       <Name>SIGAPPBOM.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Productores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

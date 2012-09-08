@@ -29,3 +29,34 @@ D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Te
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\ResolveAssemblyReference.cache
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\SIGAPPBOM.Servicio.Unit.Test.dll
 D:\Desarrollo\Repositorios Github\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\SIGAPPBOM.Servicio.Unit.Test.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Servicio.Unit.Test.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Servicio.Unit.Test.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\AutoMapper.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\Moq.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\nunit.framework.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Dominio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Servicio.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Web.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\FluentNHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Infraestructura.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\NHibernate.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\StructureMap.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\Iesi.Collections.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Dominio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.NHibernate.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Servicio.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Web.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\AutoMapper.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\Moq.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\Moq.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\nunit.framework.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\FluentNHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\SIGAPPBOM.Infraestructura.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\NHibernate.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\StructureMap.pdb
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\StructureMap.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\bin\Debug\Iesi.Collections.xml
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\SIGAPPBOM.Servicio.Unit.Test.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\SIGAPPBOM.Servicio.Unit.Test.dll
+C:\Users\Armando\Documents\GitHub\SIGAPPBOM\SIGAPPBOM\SIGAPPBOM.Servicio.Unit.Test\obj\Debug\SIGAPPBOM.Servicio.Unit.Test.pdb

@@ -56,6 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administracion\ArticulosControllerTest.cs" />
+    <Compile Include="Administracion\DestinoControllerTest.cs" />
+    <Compile Include="Administracion\EmpacadoraControllerTest.cs" />
+    <Compile Include="Administracion\MenuControllerTest.cs" />
+    <Compile Include="Administracion\ParcelaControllerTest.cs" />
+    <Compile Include="Administracion\PersonaControllerTest.cs" />
+    <Compile Include="Administracion\ProductorControllerTest.cs" />
+    <Compile Include="Administracion\RolControllerTest.cs" />
+    <Compile Include="Administracion\RolUsuarioControllerTest.cs" />
+    <Compile Include="Administracion\UsuarioControllerTest.cs" />
     <Compile Include="Logistica\Controller\AlmacenControllerTest.cs" />
     <Compile Include="Logistica\Controller\PedidosInsumosControllerTest.cs" />
     <Compile Include="Mapeo\ConfigurationTest.cs" />
@@ -64,6 +73,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SIGAPPBOM.Dominio\SIGAPPBOM.Dominio.csproj">
+      <Project>{DCE7760B-AE62-430A-8930-7863FE5B5F0A}</Project>
+      <Name>SIGAPPBOM.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SIGAPPBOM.Infraestructura\SIGAPPBOM.Infraestructura.csproj">
       <Project>{ADB9A3CD-570B-4E67-B516-4ABA7853294E}</Project>
       <Name>SIGAPPBOM.Infraestructura</Name>

@@ -40,6 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Destinos\Destino.cs" />
+    <Compile Include="Administracion\Empacadoras\Empacadora.cs" />
+    <Compile Include="Administracion\Menues\Menu.cs" />
+    <Compile Include="Administracion\Parcelas\Parcela.cs" />
+    <Compile Include="Administracion\Personas\Persona.cs" />
+    <Compile Include="Administracion\Productores\Productor.cs" />
+    <Compile Include="Administracion\Roles\Rol.cs" />
+    <Compile Include="Administracion\RolUsuarios\RolUsuario.cs" />
+    <Compile Include="Administracion\Usuarios\Usuario.cs" />
     <Compile Include="Logistica\Almacen\DetalleNotaSalida.cs" />
     <Compile Include="Logistica\Almacen\NotaSalida.cs" />
     <Compile Include="Logistica\Articulos\Articulo.cs" />
@@ -49,8 +58,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administracion\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="Produccion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SIGAPPBOM.Dominio.dll" />
+    <Content Include="bin\Debug\SIGAPPBOM.Dominio.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
